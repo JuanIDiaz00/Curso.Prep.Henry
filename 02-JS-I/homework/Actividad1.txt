@@ -1,0 +1,14 @@
+
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+Variables : Una variable es una forma que tenemos para guardar datos útiles que tengamos, y poder usarlos despúes.
+
+Strings : Un string es una cadena de carácteres, estos pueden ser letras, numeros o simbolos, pero siempre serán interpretados como caracteres, así que no pueden ser utilizados para, por ejemplo, hacer operaciones aritméticas.
+
+Funciones (argumentos, return) : Una función es la herramienta que nos permite trabajar con las variables que nosotros tengamos. Las funciones son "callable objects", por lo que comparten propiedades con el resto de objetos.
+                                 Los argumentos en una función (definidos entre paréntesis luego del nombre de la función) son los datos con los que operaran las variables en nuestras funciones.
+                                 El return es una acción dentro de una función, que le indica a la función que "devuelva" el resultado de la operación que estuviera ejecutando.
+
+Declaraciones if : El if es un indicador de Condiciones, indica que para que se cumpla parte de nuestro código, se tienen que cumplir ciertas condiciones que hayamos establecido.
+
+Valores booleanos (true, false) : Los valores Booleanos vienen de la Lógica de Boole, y hay dos de ellos; True y False, como sus nombres indican, se utilizan para marcar cuando algo es verdadero(true) o falso(false).
