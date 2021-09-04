@@ -11,6 +11,7 @@ function mayuscula(nombre) {
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
+
   cb();
 }
 
@@ -18,6 +19,7 @@ function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
+
   return cb(n1 , n2);
 }
 
@@ -27,22 +29,25 @@ function sumarArray(numeros, cb) {
   // No es necesario devolver nada
   //Tu código:
 
-  let suma = 0;
-  for (let i = 0 ; i < numeros.length ; i++){
-    suma = suma + numeros[i];
-  }
+  let suma = numeros.reduce((acc, val) => acc + val);
+
   cb(suma);
 }
+
+/*
+(function sum (acc, val){           queda más lindo con una función =>
+  return acc + val;
+});
+*/
 
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
 
-  for(let i = 0 ; i < array.length ; i++ ){
-    cb(array[i]);
-  }
-  
+  array.forEach(function(element, i){
+    cb(element);
+  })
 }
 
 function map(array, cb) {
@@ -51,9 +56,11 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
   
-  let newArray = array.map(function(elemento){
-    return cb(elemento);
-  });
+  let newArray = [];
+  
+  newArray = array.map(function(element, i){
+    return cb(element);
+  })
 
   return newArray;
 }
@@ -64,11 +71,13 @@ function filter(array) {
   //Tu código:
 
   let newArray = [];
-  for (let i = 0 ; i < array.length ; i++){
-    if (array[i][0] === "a"){
+
+  for(let i = 0; i < array.length; i++){
+    if(array[i][0] === "a" || array[i][0] === "A"){
       newArray.push(array[i]);
-    }
+    }  
   }
+
   return newArray;
 }
 
